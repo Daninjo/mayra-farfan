@@ -18,7 +18,7 @@ Todos los botones de la landing abren WhatsApp con un mensaje precargado. La lan
 | `…/mayra-farfan/?src=ig` (bio de Instagram) | "Hola May! Vengo de tu Instagram y quiero reservar un turno" |
 | `…/mayra-farfan/` | "Hola May! Vi tu página y quiero reservar un turno" |
 
-Si tocan "Reservar turno" dentro de un servicio, se agrega una línea "Motivo: …" con el servicio (descenso de peso, salud digestiva, condiciones metabólicas, nutrición infantil).
+Si tocan "Reservar turno" dentro de un servicio, se agrega una línea "Motivo: …" con el servicio (descenso de peso, salud digestiva, condiciones metabólicas, medición InBody).
 
 ## Texto sugerido para compartir el flyer por WhatsApp
 
