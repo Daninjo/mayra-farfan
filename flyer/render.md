@@ -15,7 +15,7 @@ else await p.screenshot({path:out,fullPage:full==='1'});await b.close();})();
 
 ```
 node shot.js file://$PWD/flyer/flyer.html 1080 1350 flyer/flyer-wa.png 0
-node shot.js file://$PWD/flyer/flyer.html 1080 1350 flyer/flyer-a5.pdf 0
+node shot2x.js file://$PWD/flyer/flyer.html 1080 1350 flyer2x.png   # deviceScaleFactor 2 → PIL lo pega centrado en A5 a 370 dpi y guarda flyer-a5.pdf
 node shot.js file://$PWD/flyer/og.html 1200 630 og.png 0   # luego convertir a og.jpg
 ```
 

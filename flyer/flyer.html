@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
 /* Lienzo fijo 1080×1350 (4:5). Para WhatsApp/Instagram se exporta como PNG.
-   Para A5 se imprime con @page (misma proporción aprox., escala por CSS). */
+   Para A5 se renderiza a 2x y se empaqueta como PDF (ver render.md). */
 :root{
   --crema:#F4EDE3; --crema2:#EBE1D3; --marron:#8B6A55; --tinta:#3B2E2A; --gris:#6E615A; --salmon:#D9836B;
   --display:'Space Grotesk','Helvetica Neue',Arial,sans-serif;
@@ -43,11 +43,6 @@ hr{border:0;border-top:2px solid #DCCFBF;margin:26px 0 22px}
 .bar .qr img{width:164px;height:164px;display:block}
 .bar .qr span{display:block;font-family:var(--mono);font-size:13px;letter-spacing:.06em;margin-top:8px;color:var(--marron);font-weight:500}
 .foot{font-family:var(--mono);font-size:15px;letter-spacing:.16em;text-transform:uppercase;text-align:center;color:var(--gris);padding-bottom:30px}
-@page{size:148mm 210mm;margin:0}
-@media print{
-  html,body{width:148mm;height:210mm}
-  .flyer{transform:scale(.5185);transform-origin:top left;height:1350px}
-}
 </style>
 </head>
 <body>
