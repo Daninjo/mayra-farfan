@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lic. Mayra Farfán · Nutrición y composición corporal con InBody</title>
+<meta name="description" content="¿Sabés de qué está hecho tu cuerpo? Medición InBody y consulta nutricional con enfoque integral en Las Cañitas, CABA. Agendá tu turno por WhatsApp.">
+<meta property="og:title" content="¿Sabés de qué está hecho tu cuerpo?">
+<meta property="og:description" content="Medición InBody + plan de acción personalizado con la Lic. Mayra Farfán. Migueletes 1082, Las Cañitas. Agendá por WhatsApp.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://daninjo.github.io/mayra-farfan/">
+<meta property="og:image" content="https://daninjo.github.io/mayra-farfan/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_AR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%238B6A55'/%3E%3Ccircle cx='32' cy='32' r='11' fill='%23F4EDE3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+/* ===== PALETA — continuidad con el flyer de May =====
+   crema  #F4EDE3  fondo
+   crema2 #EBE1D3  tarjetas
+   marron #8B6A55  bloque de contacto, acento principal
+   tinta  #3B2E2A  texto
+   salmon #D9836B  viñeta
+   verde  #2F6B4F  secundario (guía de preparación / honorarios)
+=================================================== */
+:root{
+  --crema:#F4EDE3; --crema2:#EBE1D3; --linea:#DCCFBF;
+  --marron:#8B6A55; --marron-osc:#6F5343; --tinta:#3B2E2A; --gris:#6E615A;
+  --salmon:#D9836B; --verde:#2F6B4F; --wa:#25D366;
+  --display:'Space Grotesk','Helvetica Neue',Arial,sans-serif;
+  --body:'Inter','Helvetica Neue',Arial,sans-serif;
+  --mono:'IBM Plex Mono','SF Mono',Menlo,monospace;
+  --max:1040px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{overflow-x:hidden;background:var(--crema);color:var(--tinta);font-family:var(--body);line-height:1.55;font-size:17px}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.25rem}
+section{padding:3.5rem 0}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--marron);font-weight:500}
+h1,h2,h3{font-family:var(--display);line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);margin:.5rem 0 1.5rem;font-weight:700}
+.muted{color:var(--gris)}
+.divider{border:0;border-top:1px solid var(--linea)}
+
+/* ---- botones ---- */
+.btn{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--display);font-weight:700;font-size:1.05rem;padding:.95rem 1.5rem;border-radius:999px;text-decoration:none;transition:transform .12s ease,background .12s ease}
+.btn:active{transform:scale(.98)}
+.btn-wa{background:var(--marron);color:#fff}
+.btn-wa:hover{background:var(--marron-osc)}
+.btn-ghost{background:transparent;color:var(--tinta);border:1.5px solid var(--tinta)}
+.btn svg{width:22px;height:22px;flex:none}
+
+/* ---- nav ---- */
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 0}
+nav .brand{font-family:var(--display);font-weight:700;font-size:1.05rem;text-decoration:none}
+nav .brand span{display:block;font-family:var(--mono);font-weight:500;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--marron)}
+nav .btn{padding:.6rem 1.1rem;font-size:.95rem}
+nav .btn svg{width:18px;height:18px}
+
+/* ---- hero ---- */
+.hero{padding:1.5rem 1.25rem 3rem}
+.hero .grid{display:grid;grid-template-columns:1fr;gap:2rem;align-items:center}
+.hero h1{font-size:clamp(2.6rem,8.5vw,4.6rem);text-transform:uppercase;font-weight:700;line-height:.98}
+.hero h1 em{font-style:normal;color:var(--marron)}
+.hero p.lead{font-size:clamp(1.05rem,2.3vw,1.3rem);margin:1.4rem 0 1.8rem;max-width:34ch}
+.hero .cta{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center}
+.hero .sub{font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gris);margin-top:1rem}
+.hero .device{position:relative;display:flex;justify-content:center}
+.hero .device img{width:min(48vw,210px);height:auto;filter:drop-shadow(0 30px 40px rgba(59,46,42,.22))}
+.hero .device::before{content:"";position:absolute;inset:auto 10% 0 10%;height:70%;background:var(--crema2);border-radius:28px;z-index:-1}
+@media(min-width:760px){
+  .hero{padding:2rem 1.25rem 4rem}
+  .hero .grid{grid-template-columns:1.15fr .85fr;gap:3rem}
+  .hero .device img{width:min(24vw,240px)}
+}
+
+/* ---- métricas ---- */
+.metrics{display:grid;grid-template-columns:1fr;gap:.75rem}
+.metric{background:var(--crema2);border-radius:14px;padding:1.15rem 1.25rem;border-left:4px solid var(--marron)}
+.metric h3{font-size:1.25rem;font-weight:700;margin-bottom:.15rem}
+.metric p{font-family:var(--mono);font-size:.8rem;color:var(--gris)}
+@media(min-width:600px){.metrics{grid-template-columns:1fr 1fr}}
+.plan{position:relative;padding-left:1.7rem;margin-top:1.75rem;font-size:1.1rem;max-width:44ch}
+.plan::before{content:"";position:absolute;left:0;top:.5rem;width:12px;height:12px;border-radius:50%;background:var(--salmon)}
+.plan strong{font-weight:600;background:linear-gradient(transparent 60%,#EFD3C7 60%)}
+
+/* ---- sobre ---- */
+.about{background:var(--crema2)}
+.about .grid{display:grid;grid-template-columns:1fr;gap:2rem;align-items:center}
+.about .photo{border-radius:20px;overflow:hidden;aspect-ratio:4/5;max-width:380px;margin:0 auto}
+.about .photo img{width:100%;height:100%;object-fit:cover;object-position:center 15%}
+.about p{margin-bottom:1rem;max-width:52ch}
+.about .name{font-family:var(--display);font-size:1.6rem;font-weight:700;margin:.25rem 0 1rem}
+.ig{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.82rem;letter-spacing:.05em;text-decoration:none;border-bottom:1.5px solid var(--marron);padding-bottom:2px}
+.ig svg{width:18px;height:18px}
+@media(min-width:760px){.about .grid{grid-template-columns:.8fr 1.2fr;gap:3.5rem}}
+
+/* ---- honorarios ---- */
+.fees{border-top:2px solid var(--tinta)}
+.fee-group{margin-bottom:2rem}
+.fee-group .label{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--verde);margin:.6rem 0 .2rem}
+.fee{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--linea);text-decoration:none}
+.fee:hover .cta-hint{opacity:1}
+.fee .n{font-weight:500}
+.fee .n small{display:block;font-size:.85rem;color:var(--gris);font-weight:400}
+.fee .p{font-family:var(--mono);font-weight:500;white-space:nowrap}
+.fee .p s{color:#B4A597;font-weight:400;margin-right:.5rem;font-size:.85em}
+.fee.hi{background:var(--crema2);margin:0 -1rem;padding:1rem;border-radius:12px;border-bottom:0}
+.cta-hint{font-family:var(--mono);font-size:.68rem;color:var(--marron);opacity:.7;margin-left:.5rem}
+details summary{cursor:pointer;font-family:var(--display);font-weight:700;font-size:1.15rem;padding:1rem 0;list-style:none;display:flex;justify-content:space-between;align-items:center}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";font-size:1.5rem;color:var(--marron)}
+details[open] summary::after{content:"–"}
+.fees .note{font-family:var(--mono);font-size:.72rem;color:var(--gris);letter-spacing:.05em;margin-top:1rem}
+@media(min-width:760px){.fees .cols{display:grid;grid-template-columns:1fr 1fr;gap:3rem}}
+
+/* ---- preparación ---- */
+.prep{background:#E2DDD0}
+.prep ol{list-style:none;display:grid;gap:1.25rem;counter-reset:p}
+.prep li{display:grid;grid-template-columns:2.2rem 1fr;gap:.5rem;counter-increment:p}
+.prep li>div{min-width:0}
+.prep li::before{content:"0" counter(p);font-family:var(--mono);color:var(--salmon);font-weight:500;padding-top:.25rem}
+.prep li strong{display:block;font-family:var(--display);font-weight:700;font-size:1.15rem}
+.prep li span{font-family:var(--mono);font-size:.85rem;color:var(--gris)}
+.prep h2 em{font-style:normal;color:var(--verde)}
+@media(min-width:760px){.prep .grid{display:grid;grid-template-columns:1fr 1.4fr;gap:3rem;align-items:start}}
+
+/* ---- reseñas ---- */
+.reviews .stars{font-family:var(--display);font-size:2.6rem;font-weight:700;display:flex;align-items:center;gap:.6rem}
+.reviews .stars span{color:var(--salmon);font-size:1.6rem;letter-spacing:.05em}
+.quotes{display:grid;gap:1rem;margin-top:1.5rem}
+.quote{background:var(--crema2);border-radius:14px;padding:1.4rem;font-size:1rem}
+.quote p{margin-bottom:.8rem}
+.quote cite{font-style:normal;font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gris)}
+@media(min-width:760px){.quotes{grid-template-columns:repeat(3,1fr)}}
+
+/* ---- ubicación ---- */
+.where .grid{display:grid;gap:1.5rem}
+.where dl{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.25rem;font-size:1rem}
+.where dt{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--marron);padding-top:.25rem}
+.where dd a{text-decoration:none;border-bottom:1.5px solid var(--marron)}
+.where iframe{width:100%;height:280px;border:0;border-radius:16px;filter:saturate(.7) sepia(.15)}
+@media(min-width:760px){.where .grid{grid-template-columns:1fr 1fr;align-items:start}.where iframe{height:320px}}
+
+/* ---- cierre ---- */
+.final{background:var(--marron);color:#fff;border-radius:28px;padding:2.75rem 1.5rem;text-align:center;margin:0 1.25rem}
+.final h2{color:#fff;margin-bottom:.5rem}
+.final .eyebrow{color:#EBD9CC}
+.final .btn-wa{background:#fff;color:var(--marron);margin-top:1.25rem}
+.final .btn-wa:hover{background:var(--crema)}
+.final .tel{font-family:var(--display);font-weight:700;font-size:1.4rem;margin-top:1rem}
+footer{padding:2.5rem 0 6rem;text-align:center;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gris)}
+footer a{text-decoration:none}
+
+/* ---- barra flotante mobile ---- */
+.stick{position:fixed;left:0;right:0;bottom:0;padding:.75rem 1rem calc(.75rem + env(safe-area-inset-bottom));background:rgba(244,237,227,.92);backdrop-filter:blur(10px);border-top:1px solid var(--linea);z-index:20;display:flex;justify-content:center}
+.stick .btn{width:100%;max-width:420px;justify-content:center;background:var(--wa);color:#fff}
+@media(min-width:760px){.stick{display:none}footer{padding-bottom:3rem}}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <nav>
+    <a class="brand" href="#top">Mayra Farfán<span>Lic. en Nutrición</span></a>
+    <a class="btn btn-wa wa" data-msg="" href="#" aria-label="Agendar por WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.7.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+      Agendar
+    </a>
+  </nav>
+</header>
+
+<main id="top">
+
+<!-- ================= HERO ================= -->
+<section class="hero wrap">
+  <div class="grid">
+    <div>
+      <p class="eyebrow">Nutrición y composición corporal · Las Cañitas</p>
+      <h1 style="margin-top:.6rem">¿Sabés<br>de qué está<br>hecho tu <em>cuerpo?</em></h1>
+      <p class="lead">Una balanza te dice un número. El InBody te dice cuánto es músculo, cuánto es grasa, cuánto es agua, y dónde.</p>
+      <div class="cta">
+        <a class="btn btn-wa wa" data-msg="" href="#">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.7.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+          Agendá tu turno
+        </a>
+        <a class="btn btn-ghost" href="#honorarios">Ver honorarios</a>
+      </div>
+      <p class="sub">Migueletes 1082 · Las Cañitas, CABA · Lun a vie 9 a 18 h</p>
+    </div>
+    <div class="device">
+      <img src="img/inbody.png" alt="Equipo InBody de análisis de composición corporal" width="387" height="1082" fetchpriority="high">
+    </div>
+  </div>
+</section>
+
+<!-- ================= QUÉ MIDE ================= -->
+<section class="wrap" id="que-mide">
+  <p class="eyebrow">Qué mide el InBody</p>
+  <h2>Mucho más que tu peso</h2>
+  <div class="metrics">
+    <div class="metric"><h3>Masa muscular</h3><p>Total y por segmento</p></div>
+    <div class="metric"><h3>Grasa corporal</h3><p>Porcentaje y grasa visceral</p></div>
+    <div class="metric"><h3>Agua corporal</h3><p>Hidratación y retención</p></div>
+    <div class="metric"><h3>Salud celular</h3><p>Vitalidad y estado celular</p></div>
+  </div>
+  <p class="plan">Un análisis preciso que se traduce en <strong>un plan de acción personalizado</strong>. En 15 minutos tenés el informe completo y lo repasamos juntas en la consulta.</p>
+</section>
+
+<!-- ================= SOBRE MAY ================= -->
+<section class="about" id="sobre">
+  <div class="wrap grid">
+    <div class="photo"><img src="img/mayra.jpg" alt="Lic. Mayra Farfán" loading="lazy" width="800" height="1000"></div>
+    <div>
+      <p class="eyebrow">Licenciada en Nutrición</p>
+      <p class="name">Mayra Farfán</p>
+      <p>Trabajo el descenso de peso con un <strong>enfoque integral y no peso‑centrista</strong>: el número de la balanza es un dato, no el objetivo. Lo que importa es de qué está hecho tu cuerpo, cómo comés, cómo descansás y cómo te sentís.</p>
+      <p>Con el InBody medimos lo que cambia de verdad, músculo, grasa y agua, y a partir de eso armamos un plan que se adapte a tu vida y no al revés. Sin dietas de moda, con acompañamiento consulta a consulta.</p>
+      <p>Atiendo de forma presencial en Las Cañitas y también virtual.</p>
+      <a class="ig" href="https://www.instagram.com/nutri.maychu" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        @nutri.maychu
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HONORARIOS ================= -->
+<section class="wrap fees" id="honorarios">
+  <p class="eyebrow">Honorarios · Valores 2026</p>
+  <h2>Sesiones y packs</h2>
+  <div class="cols">
+    <div>
+      <div class="fee-group">
+        <p class="label">Presencial · Las Cañitas</p>
+        <a class="fee hi wa" data-msg="1ra consulta con InBody" href="#"><span class="n">1ra consulta con InBody<small>Medición + consulta + plan de acción</small></span><span class="p">$80.000<span class="cta-hint">agendar →</span></span></a>
+        <a class="fee wa" data-msg="Solo InBody" href="#"><span class="n">Solo InBody<small>Medición e informe, sin consulta</small></span><span class="p">$50.000</span></a>
+        <a class="fee wa" data-msg="Consulta de seguimiento con InBody" href="#"><span class="n">Seguimiento con InBody</span><span class="p">$60.000</span></a>
+      </div>
+      <div class="fee-group">
+        <p class="label">Virtual</p>
+        <a class="fee wa" data-msg="1ra consulta virtual" href="#"><span class="n">1ra consulta</span><span class="p">$65.000</span></a>
+        <a class="fee wa" data-msg="Consulta de seguimiento virtual" href="#"><span class="n">Consulta de seguimiento</span><span class="p">$50.000</span></a>
+      </div>
+    </div>
+    <div>
+      <details>
+        <summary>Packs (validez 4 meses)</summary>
+        <div class="fee-group">
+          <p class="label">Pack inicial · 1ra consulta + 3 seguimientos</p>
+          <a class="fee wa" data-msg="Pack inicial presencial con InBody" href="#"><span class="n">Presencial, con InBody</span><span class="p"><s>$260.000</s>$230.000</span></a>
+          <a class="fee wa" data-msg="Pack inicial virtual" href="#"><span class="n">Virtual</span><span class="p"><s>$215.000</s>$190.000</span></a>
+        </div>
+        <div class="fee-group">
+          <p class="label">Pack seguimiento · 4 sesiones</p>
+          <a class="fee wa" data-msg="Pack seguimiento presencial con InBody" href="#"><span class="n">Presencial, con InBody</span><span class="p"><s>$240.000</s>$200.000</span></a>
+          <a class="fee wa" data-msg="Pack seguimiento virtual" href="#"><span class="n">Virtual</span><span class="p"><s>$200.000</s>$170.000</span></a>
+        </div>
+        <div class="fee-group">
+          <p class="label">Pack solo InBody · 4 mediciones</p>
+          <a class="fee wa" data-msg="Pack solo InBody (4 mediciones)" href="#"><span class="n">Presencial</span><span class="p"><s>$200.000</s>$170.000</span></a>
+        </div>
+      </details>
+      <p class="note">Tocá cualquier opción para consultar disponibilidad por WhatsApp.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PREPARACIÓN ================= -->
+<section class="prep" id="preparacion">
+  <div class="wrap grid">
+    <div>
+      <p class="eyebrow" style="color:var(--verde)">Guía rápida de preparación</p>
+      <h2>Antes de<br>tu <em>medición</em></h2>
+      <p class="muted">Tres puntos simples para que la lectura sea lo más precisa posible.</p>
+    </div>
+    <ol>
+      <li><div><strong>2 a 3 horas sin comer ni tomar líquidos</strong><span>Si no llegás con el ayuno completo, tratá de no tomar demasiada agua justo antes.</span></div></li>
+      <li><div><strong>Ropa liviana</strong><span>Si preferís, podés traer una muda de short y top para cambiarte.</span></div></li>
+      <li><div><strong>Sacate reloj, pulseras y anillos</strong><span>El metal interfiere con la lectura de los electrodos.</span></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= RESEÑAS ================= -->
+<section class="wrap reviews" id="resenas">
+  <p class="eyebrow">Lo que dicen las pacientes</p>
+  <div class="stars">5.0 <span>★★★★★</span> <a class="muted" style="font-family:var(--mono);font-size:.78rem;font-weight:500;letter-spacing:.05em" href="https://maps.app.goo.gl/xYsRs5TnKhgfKKxu7" target="_blank" rel="noopener">27 reseñas en Google</a></div>
+  <div class="quotes">
+    <div class="quote"><p>“Me atiendo hace unos meses con Mayra y tuve excelentes resultados en mi cambio de composición.”</p><cite>Julieta · Google</cite></div>
+    <div class="quote"><p>“Desde el primer momento me sentí súper cómoda y escuchada. No se trata simplemente de seguir una dieta.”</p><cite>Paciente · Google</cite></div>
+    <div class="quote"><p>“Me cambió totalmente mis hábitos. Me hizo crear un vínculo mucho más sano con la comida.”</p><cite>Agustina · Google</cite></div>
+  </div>
+</section>
+
+<!-- ================= UBICACIÓN ================= -->
+<section class="wrap where" id="ubicacion">
+  <p class="eyebrow">Consultorio</p>
+  <h2>Dónde y cuándo</h2>
+  <div class="grid">
+    <dl>
+      <dt>Dirección</dt><dd><a href="https://maps.app.goo.gl/xYsRs5TnKhgfKKxu7" target="_blank" rel="noopener">Migueletes 1082</a><br><span class="muted">esq. Olleros · Las Cañitas, Palermo, CABA</span></dd>
+      <dt>Horarios</dt><dd>Lunes a viernes, 9 a 18 h</dd>
+      <dt>WhatsApp</dt><dd><a class="wa" data-msg="" href="#">+54 9 11 3203‑9633</a></dd>
+      <dt>Instagram</dt><dd><a href="https://www.instagram.com/nutri.maychu" target="_blank" rel="noopener">@nutri.maychu</a></dd>
+    </dl>
+    <iframe loading="lazy" title="Mapa del consultorio" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Nutrici%C3%B3n+y+Composici%C3%B3n+Corporal+Lic.+Mayra+Farf%C3%A1n,+Migueletes+1082,+CABA&z=16&output=embed"></iframe>
+  </div>
+</section>
+
+<!-- ================= CIERRE ================= -->
+<section style="padding-top:1rem">
+  <div class="final" style="max-width:var(--max);margin-left:auto;margin-right:auto">
+    <p class="eyebrow">Agendá tu turno</p>
+    <h2>Empezá por saber<br>de qué estás hecha</h2>
+    <p style="opacity:.9;max-width:38ch;margin:0 auto">Escribime por WhatsApp y coordinamos día y horario. Te confirmo en el día.</p>
+    <a class="btn btn-wa wa" data-msg="" href="#">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.7.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+      Escribir por WhatsApp
+    </a>
+    <p class="tel">+54 9 11 3203 9633</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <p>Lic. Mayra Farfán · Nutrición y composición corporal</p>
+  <p style="margin-top:.4rem">Migueletes 1082 · Las Cañitas, CABA · <a href="https://www.instagram.com/nutri.maychu" target="_blank" rel="noopener">@nutri.maychu</a></p>
+</footer>
+
+<div class="stick">
+  <a class="btn wa" data-msg="" href="#">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.7.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+    Agendá tu turno por WhatsApp
+  </a>
+</div>
+
+<script>
+/* Todos los CTAs abren WhatsApp con un mensaje precargado.
+   El origen (?src=flyer_qr | flyer_wa | ig) viaja dentro del texto:
+   así May sabe de dónde llegó cada persona sin analytics, y el agente
+   de turnos lo puede leer después. */
+(function(){
+  var TEL='5491132039633';
+  var src=new URLSearchParams(location.search).get('src')||'';
+  var intro={
+    flyer_qr:'Hola May! Escaneé el QR de tu flyer y quiero agendar una medición InBody 🙂',
+    flyer_wa:'Hola May! Vi tu flyer y quiero agendar una medición InBody 🙂',
+    ig:'Hola May! Vengo de tu Instagram y quiero agendar un turno 🙂'
+  }[src]||'Hola May! Vi tu página y quiero agendar un turno 🙂';
+  document.querySelectorAll('a.wa').forEach(function(a){
+    var s=a.getAttribute('data-msg');
+    var msg=intro+(s?'\nMe interesa: '+s:'');
+    a.href='https://wa.me/'+TEL+'?text='+encodeURIComponent(msg);
+    a.target='_blank'; a.rel='noopener';
+  });
+})();
+</script>
+</body>
+</html>

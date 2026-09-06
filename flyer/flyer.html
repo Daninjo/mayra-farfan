@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Flyer · Lic. Mayra Farfán · InBody</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+/* Lienzo fijo 1080×1350 (4:5). Para WhatsApp/Instagram se exporta como PNG.
+   Para A5 se imprime con @page (misma proporción aprox., escala por CSS). */
+:root{
+  --crema:#F4EDE3; --crema2:#EBE1D3; --marron:#8B6A55; --tinta:#3B2E2A; --gris:#6E615A; --salmon:#D9836B;
+  --display:'Space Grotesk','Helvetica Neue',Arial,sans-serif;
+  --body:'Inter','Helvetica Neue',Arial,sans-serif;
+  --mono:'IBM Plex Mono','SF Mono',Menlo,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#fff}
+.flyer{width:1080px;height:1350px;background:var(--crema);color:var(--tinta);font-family:var(--body);position:relative;overflow:hidden;display:flex;flex-direction:column}
+.top{padding:56px 64px 0;display:flex;flex-direction:column}
+.eyebrow{font-family:var(--mono);font-size:17px;letter-spacing:.16em;text-transform:uppercase;color:var(--marron);font-weight:500}
+h1{font-family:var(--display);font-weight:700;font-size:78px;line-height:.96;text-transform:uppercase;margin-top:14px;letter-spacing:-.01em}
+h1 em{font-style:normal;color:var(--marron)}
+.lead{font-size:27px;line-height:1.4;margin:24px 0 0;max-width:760px}
+hr{border:0;border-top:2px solid #DCCFBF;margin:26px 0 22px}
+.plan{font-size:24px;line-height:1.4;position:relative;padding-left:32px}
+.plan::before{content:"";position:absolute;left:0;top:12px;width:14px;height:14px;border-radius:50%;background:var(--salmon)}
+.plan strong{font-weight:600;background:linear-gradient(transparent 62%,#EFD3C7 62%)}
+.mid{display:grid;grid-template-columns:1fr 380px;gap:20px;align-items:end;margin-top:10px;height:500px}
+.metrics{display:grid;gap:12px;padding-bottom:18px}
+.metric{background:var(--crema2);border-radius:16px;padding:18px 26px;border-left:6px solid var(--marron)}
+.metric h3{font-family:var(--display);font-size:27px;font-weight:700;line-height:1.1}
+.metric p{font-family:var(--mono);font-size:17px;color:var(--gris);margin-top:4px}
+.device{display:flex;justify-content:center;align-items:flex-end;height:100%}
+.device img{height:490px;width:auto;filter:drop-shadow(0 26px 30px rgba(59,46,42,.22))}
+.bar{background:var(--marron);color:#fff;margin:0 40px 24px;border-radius:26px;padding:26px 40px;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
+.bar .lab{font-family:var(--mono);font-size:15px;letter-spacing:.16em;text-transform:uppercase;color:#EBD9CC}
+.bar .name{font-family:var(--display);font-size:42px;font-weight:700;line-height:1.05;margin:4px 0 14px}
+.bar .tel{display:flex;align-items:center;gap:14px;font-family:var(--display);font-size:38px;font-weight:700}
+.bar .tel svg{width:40px;height:40px;flex:none}
+.bar .qr{background:var(--crema);border-radius:18px;padding:12px 12px 10px;text-align:center;color:var(--tinta)}
+.bar .qr img{width:164px;height:164px;display:block}
+.bar .qr span{display:block;font-family:var(--mono);font-size:13px;letter-spacing:.06em;margin-top:8px;color:var(--marron);font-weight:500}
+.foot{font-family:var(--mono);font-size:15px;letter-spacing:.16em;text-transform:uppercase;text-align:center;color:var(--gris);padding-bottom:30px}
+@page{size:148mm 210mm;margin:0}
+@media print{
+  html,body{width:148mm;height:210mm}
+  .flyer{transform:scale(.5185);transform-origin:top left;height:1350px}
+}
+</style>
+</head>
+<body>
+<div class="flyer">
+  <div class="top">
+    <p class="eyebrow">Nutrición y composición corporal · Las Cañitas</p>
+    <h1>¿Sabés<br>de qué está<br>hecho tu <em>cuerpo?</em></h1>
+    <p class="lead">Una balanza te dice un número. El InBody te dice cuánto es músculo, cuánto es grasa, cuánto es agua, y dónde.</p>
+    <hr>
+    <p class="plan">Un análisis preciso que se traduce en <strong>un plan de acción personalizado</strong></p>
+    <div class="mid">
+      <div class="metrics">
+        <div class="metric"><h3>Masa muscular</h3><p>Total y por segmento</p></div>
+        <div class="metric"><h3>Grasa corporal</h3><p>Porcentaje y grasa visceral</p></div>
+        <div class="metric"><h3>Agua corporal</h3><p>Hidratación y retención</p></div>
+        <div class="metric"><h3>Salud celular</h3><p>Vitalidad y estado celular</p></div>
+      </div>
+      <div class="device"><img src="../img/inbody.png" alt=""></div>
+    </div>
+  </div>
+  <div class="bar">
+    <div>
+      <p class="lab">Licenciada en Nutrición</p>
+      <p class="name">Mayra Farfán</p>
+      <p class="lab" style="margin-bottom:8px">Agendá tu turno</p>
+      <p class="tel"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.7.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>+54 9 11 3203 9633</p>
+    </div>
+    <div class="qr">
+      <img src="qr.svg" alt="QR a la página">
+      <span>daninjo.github.io/mayra-farfan</span>
+    </div>
+  </div>
+  <p class="foot">Migueletes 1082 · Las Cañitas, CABA · @nutri.maychu</p>
+</div>
+</body>
+</html>
