@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lic. Mayra Farfán · Nutrición con enfoque integral · Las Cañitas</title>
-<meta name="description" content="Consultorio de nutrición de la Lic. Mayra Farfán en Las Cañitas, CABA. Descenso de peso con enfoque integral, no peso-centrista, con medición de composición corporal InBody. Presencial y virtual.">
+<meta name="description" content="Consultorio de nutrición de la Lic. Mayra Farfán en Las Cañitas, CABA. Descenso de peso con enfoque integral, salud digestiva, condiciones metabólicas y nutrición infantil. Presencial y virtual.">
 <meta property="og:title" content="Lic. Mayra Farfán · Nutrición con enfoque integral">
 <meta property="og:description" content="Descenso de peso sin obsesión con la balanza. Consultas presenciales en Las Cañitas y virtuales, con medición InBody. Agendá por WhatsApp.">
 <meta property="og:type" content="website">
@@ -56,6 +56,8 @@ h2 em{font-style:normal;color:var(--verde)}
 .btn-p:hover{background:var(--verde-osc)}
 .btn-s{background:transparent;color:var(--tinta);border:1.5px solid var(--tinta)}
 .btn-s:hover{background:var(--tinta);color:var(--papel)}
+.btn-t{background:transparent;color:var(--verde);border:1.5px solid var(--verde);padding:.6rem 1.1rem;font-size:.92rem}
+.btn-t:hover{background:var(--verde);color:#fff}
 .btn svg{width:20px;height:20px;flex:none}
 
 /* ---- nav ---- */
@@ -94,16 +96,37 @@ nav .btn{padding:.6rem 1.05rem;font-size:.92rem}
 .pillar p{color:var(--gris);font-size:.98rem}
 @media(min-width:760px){.pillars{grid-template-columns:repeat(3,1fr);gap:1.25rem}}
 
+/* ---- servicios ---- */
+.services{background:var(--piedra)}
+.svc-list{display:grid;gap:1.25rem;margin-top:2rem}
+.svc{background:var(--papel);border-radius:22px;padding:1.75rem 1.5rem;display:grid;gap:1.25rem}
+.svc .num{font-family:var(--mono);font-size:.78rem;color:var(--salmon);font-weight:500}
+.svc h3{font-size:1.45rem;margin:.4rem 0 .75rem}
+.svc p{color:var(--gris);font-size:.98rem;max-width:56ch}
+.svc .cond{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--verde);margin-bottom:.6rem}
+.svc ul{list-style:none;display:grid;gap:.4rem;font-size:.95rem}
+.svc li{display:flex;gap:.6rem}
+.svc li::before{content:"—";color:var(--salmon);flex:none}
+.svc .act{margin-top:.5rem}
+@media(min-width:760px){
+  .svc{grid-template-columns:1.2fr 1fr;padding:2.25rem 2.25rem;gap:2.5rem;align-items:start}
+  .svc .act{grid-column:1/-1;margin-top:0}
+}
+
 /* ---- cómo es la consulta ---- */
-.process{background:var(--piedra)}
 .steps{display:grid;gap:0;border-top:1px solid var(--linea)}
 .step{display:grid;grid-template-columns:3rem 1fr;gap:.75rem;padding:1.4rem 0;border-bottom:1px solid var(--linea)}
 .step .n{font-family:var(--mono);color:var(--salmon);font-weight:500;padding-top:.3rem}
 .step h3{font-size:1.2rem;margin-bottom:.35rem}
 .step p{color:var(--gris);font-size:.98rem;max-width:56ch}
+.modes{display:grid;gap:.75rem;margin-top:1.75rem}
+.mode{background:var(--piedra2);border-radius:14px;padding:1rem 1.15rem;font-size:.95rem}
+.mode b{display:block;font-family:var(--display);font-size:1.02rem}
+.mode span{color:var(--gris)}
 @media(min-width:760px){.process .grid{display:grid;grid-template-columns:.9fr 1.4fr;gap:3.5rem;align-items:start}.process .grid>div:first-child{position:sticky;top:2rem}}
 
 /* ---- inbody como herramienta ---- */
+.tool{background:var(--piedra)}
 .tool .grid{display:grid;gap:2rem;align-items:center}
 .tool .shot{border-radius:22px;overflow:hidden;background:#0B0B0B;aspect-ratio:3/4;max-width:360px;margin:0 auto;width:100%;position:relative}
 .tool .shot img{width:100%;height:100%;object-fit:cover;object-position:center}
@@ -119,53 +142,42 @@ nav .btn{padding:.6rem 1.05rem;font-size:.92rem}
 .about .grid{display:grid;gap:2rem}
 .about p{margin-bottom:1rem;max-width:58ch}
 .about .quote{font-family:var(--display);font-size:clamp(1.35rem,3vw,1.9rem);font-weight:500;line-height:1.3;color:var(--verde-osc);max-width:26ch;margin-bottom:1.5rem}
-.about .creds{display:grid;gap:.5rem;margin-top:1.5rem}
+.about .creds{display:grid;gap:.5rem;margin:1.25rem 0}
 .about .creds div{display:flex;gap:.75rem;align-items:flex-start;font-size:.95rem}
 .about .creds div::before{content:"";flex:none;width:18px;height:18px;border-radius:50%;background:var(--verde);margin-top:.2rem;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E");background-size:11px;background-position:center;background-repeat:no-repeat}
-.ig{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.8rem;letter-spacing:.05em;text-decoration:none;border-bottom:1.5px solid var(--verde);padding-bottom:2px;margin-top:1rem}
+.ig{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.8rem;letter-spacing:.05em;text-decoration:none;border-bottom:1.5px solid var(--verde);padding-bottom:2px;margin-top:.5rem;margin-right:1.5rem}
 .ig svg{width:18px;height:18px}
-@media(min-width:760px){.about .grid{grid-template-columns:1fr 1fr;gap:4rem;align-items:start}}
-
-/* ---- honorarios ---- */
-.fees h2{margin-bottom:.25rem}
-.fees .cols{display:grid;gap:2.5rem;margin-top:2rem}
-.fee-group{margin-bottom:1.75rem}
-.fee-group .label{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--verde);padding-bottom:.5rem;border-bottom:2px solid var(--tinta);margin-bottom:.25rem}
-.fee{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--linea);text-decoration:none}
-.fee .n{font-weight:500}
-.fee .n small{display:block;font-size:.85rem;color:var(--gris);font-weight:400}
-.fee .p{font-family:var(--mono);font-weight:500;white-space:nowrap}
-.fee .p s{color:#B3AB9C;font-weight:400;margin-right:.5rem;font-size:.85em}
-.fee:hover .n{color:var(--verde)}
-.fees .pack h4{font-family:var(--display);font-size:1.05rem;margin:1.25rem 0 0}
-.fees .pack .sub{font-size:.85rem;color:var(--gris);margin-bottom:.25rem}
-.fees .note{font-family:var(--mono);font-size:.72rem;color:var(--gris);letter-spacing:.05em;margin-top:1.5rem}
-@media(min-width:760px){.fees .cols{grid-template-columns:1fr 1fr;gap:4rem}}
+.timeline{margin-top:2.5rem;border-top:1px solid rgba(47,107,79,.25)}
+.timeline h3{font-size:1.05rem;margin:1.25rem 0 .5rem}
+.tl{display:grid;grid-template-columns:1fr;gap:.2rem 1.25rem;padding:.75rem 0;border-bottom:1px solid rgba(47,107,79,.18);font-size:.95rem}
+@media(min-width:600px){.tl{grid-template-columns:11rem 1fr;gap:.5rem 1.25rem}}
+.tl .org{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--verde);padding-top:.3rem}
+.tl b{display:block;font-weight:600}
+.tl span{color:var(--gris);font-size:.9rem}
+@media(min-width:760px){.about .grid{grid-template-columns:.8fr 1.2fr;gap:4rem;align-items:start}}
 
 /* ---- reseñas ---- */
-.reviews{background:var(--piedra)}
 .reviews .head{display:flex;flex-wrap:wrap;align-items:baseline;gap:1rem 2rem}
 .reviews .score{font-family:var(--display);font-size:2.8rem;font-weight:700;line-height:1}
 .reviews .score span{color:var(--salmon);font-size:1.3rem;letter-spacing:.08em;margin-left:.5rem}
 .reviews .link{font-family:var(--mono);font-size:.76rem;letter-spacing:.05em;text-decoration:none;border-bottom:1.5px solid var(--verde);padding-bottom:2px}
 .quotes{display:grid;gap:1rem;margin-top:1.75rem}
-.quote{background:var(--papel);border-radius:16px;padding:1.5rem;font-size:1rem}
+.quote{background:var(--piedra2);border-radius:16px;padding:1.5rem;font-size:1rem}
 .quote p{margin-bottom:.9rem}
 .quote cite{font-style:normal;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gris)}
 @media(min-width:760px){.quotes{grid-template-columns:repeat(3,1fr)}}
 
-/* ---- ubicación ---- */
+/* ---- consultorio y turnos ---- */
+.where{background:var(--piedra)}
 .where .grid{display:grid;gap:1.75rem}
 .where dl{display:grid;grid-template-columns:auto 1fr;gap:.6rem 1.25rem;font-size:1rem}
 .where dt{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--verde);padding-top:.3rem}
 .where dd a{text-decoration:none;border-bottom:1.5px solid var(--verde)}
 .where iframe{width:100%;height:300px;border:0;border-radius:18px;filter:saturate(.6) sepia(.12)}
-.where .prep{margin-top:2rem;background:var(--piedra2);border-radius:18px;padding:1.4rem 1.5rem}
-.where .prep h3{font-size:1.05rem;margin-bottom:.75rem}
-.where .prep ul{list-style:none;display:grid;gap:.5rem;font-size:.95rem}
-.where .prep li{display:flex;gap:.7rem}
-.where .prep li::before{content:"—";color:var(--salmon)}
-@media(min-width:760px){.where .grid{grid-template-columns:1fr 1fr;align-items:start;gap:3rem}.where iframe{height:340px}}
+.where .book{margin-top:1.75rem;background:var(--papel);border-radius:18px;padding:1.5rem}
+.where .book h3{font-size:1.15rem;margin-bottom:.4rem}
+.where .book p{color:var(--gris);font-size:.95rem;margin-bottom:1rem;max-width:44ch}
+@media(min-width:760px){.where .grid{grid-template-columns:1fr 1fr;align-items:start;gap:3rem}.where iframe{height:100%;min-height:420px}}
 
 /* ---- cierre ---- */
 .final{background:var(--verde);color:#fff;border-radius:28px;padding:3rem 1.5rem;text-align:center;margin:0 auto;max-width:var(--max)}
@@ -191,7 +203,7 @@ footer a{text-decoration:none}
   <nav>
     <a class="brand" href="#top">Lic. Mayra Farfán<span>Nutrición · Las Cañitas</span></a>
     <div class="links">
-      <a href="#enfoque">Enfoque</a><a href="#consulta">La consulta</a><a href="#honorarios">Honorarios</a><a href="#ubicacion">Consultorio</a>
+      <a href="#servicios">Servicios</a><a href="#consulta">La consulta</a><a href="#sobre">Sobre mí</a><a href="#turnos">Consultorio</a>
     </div>
     <a class="btn btn-p wa" data-msg="" href="#">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.7.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
@@ -208,19 +220,19 @@ footer a{text-decoration:none}
     <div>
       <p class="eyebrow">Licenciada en Nutrición</p>
       <h1 style="margin-top:.7rem">Nutrición con enfoque integral, <em>sin obsesión con la balanza.</em></h1>
-      <p class="lead">Trabajo el descenso de peso mirando a la persona completa: hábitos, descanso, relación con la comida y composición corporal. Un plan que se adapta a tu vida, con acompañamiento consulta a consulta.</p>
+      <p class="lead">Acompaño procesos de descenso de peso, salud digestiva y condiciones metabólicas mirando a la persona completa: hábitos, descanso, relación con la comida y composición corporal. Un plan que se adapta a tu vida.</p>
       <div class="cta">
         <a class="btn btn-p wa" data-msg="" href="#">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.7.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
-          Agendar una consulta
+          Reservar turno
         </a>
-        <a class="btn btn-s" href="#consulta">Cómo trabajo</a>
+        <a class="btn btn-s" href="#servicios">Ver servicios</a>
       </div>
-      <div class="facts"><span>Presencial · Las Cañitas</span><span>Virtual</span><span>Medición InBody</span><span>5.0 ★ en Google</span></div>
+      <div class="facts"><span>Presencial · Las Cañitas</span><span>Virtual</span><span>Composición corporal InBody</span><span>5.0 ★ en Google</span></div>
     </div>
     <div class="photo">
       <img src="img/mayra.jpg" alt="Lic. Mayra Farfán en su consultorio" width="800" height="1000" fetchpriority="high">
-      <div class="tag">Lic. Mayra Farfán<span>Nutrición · Composición corporal</span></div>
+      <div class="tag">Lic. Mayra Farfán<span>Instituto Universitario CEMIC</span></div>
     </div>
   </div>
 </section>
@@ -228,50 +240,137 @@ footer a{text-decoration:none}
 <!-- ================= ENFOQUE ================= -->
 <section class="wrap" id="enfoque">
   <p class="eyebrow">Enfoque</p>
-  <h2>Bajar de peso sin que la balanza <em>dirija tu vida</em></h2>
-  <p class="lede">Hay muchas formas de perder kilos. Pocas se sostienen. Mi trabajo es que el cambio sea real, gradual y compatible con cómo vivís.</p>
+  <h2>Cambios que se sostienen, <em>no dietas que se abandonan</em></h2>
+  <p class="lede">Hay muchas formas de perder kilos. Pocas se mantienen. Mi trabajo es que el cambio sea real, gradual y compatible con cómo vivís.</p>
   <div class="pillars" style="margin-top:2rem">
-    <div class="pillar"><p class="num">01</p><h3>Descenso de peso sostenible</h3><p>Sin dietas de moda ni restricciones extremas. Cambios progresivos que se puedan mantener en el tiempo, sin efecto rebote.</p></div>
+    <div class="pillar"><p class="num">01</p><h3>Basado en evidencia</h3><p>Formación clínica hospitalaria y en investigación en salud pública. Las recomendaciones salen de la evidencia científica, no de tendencias.</p></div>
     <div class="pillar"><p class="num">02</p><h3>Enfoque integral</h3><p>Lo que comés es una parte. También miramos el descanso, la actividad, el estrés y tu relación con la comida.</p></div>
     <div class="pillar"><p class="num">03</p><h3>No peso‑centrista</h3><p>El número de la balanza no cuenta toda la historia. Seguimos lo que importa: músculo, grasa, hidratación y cómo te sentís.</p></div>
   </div>
 </section>
 
+<!-- ================= SERVICIOS ================= -->
+<section class="services" id="servicios">
+  <div class="wrap">
+    <p class="eyebrow">Servicios</p>
+    <h2>En qué te puedo <em>acompañar</em></h2>
+    <p class="lede">Consultas presenciales en Las Cañitas o virtuales. En todos los casos, un plan de alimentación personalizado y seguimiento.</p>
+
+    <div class="svc-list">
+      <article class="svc">
+        <div>
+          <p class="num">01</p>
+          <h3>Descenso de peso y composición corporal</h3>
+          <p>Un proceso de descenso de peso pensado para sostenerse en el tiempo, sin restricciones extremas ni efecto rebote. Trabajamos hábitos, porciones, organización de comidas y relación con la comida, y seguimos el progreso con medición de composición corporal, no solo con la balanza.</p>
+        </div>
+        <div>
+          <p class="cond">Para vos si</p>
+          <ul>
+            <li>Querés bajar de peso y que esta vez se mantenga</li>
+            <li>Ya probaste dietas y te cansaste de empezar de cero</li>
+            <li>Querés ganar masa muscular o bajar grasa sin perder músculo</li>
+            <li>Necesitás un plan compatible con tu trabajo, tu entrenamiento y tu vida social</li>
+          </ul>
+        </div>
+        <div class="act"><a class="btn btn-t wa" data-msg="Descenso de peso y composición corporal" href="#">Reservar turno</a></div>
+      </article>
+
+      <article class="svc">
+        <div>
+          <p class="num">02</p>
+          <h3>Salud digestiva</h3>
+          <p>Abordaje nutricional de condiciones digestivas, con planes que alivian síntomas sin restringir de más. El objetivo es que comas con tranquilidad y variedad, identificando qué te hace bien y qué no.</p>
+        </div>
+        <div>
+          <p class="cond">Condiciones que abordo</p>
+          <ul>
+            <li>Síndrome de intestino irritable (SII)</li>
+            <li>SIBO (sobrecrecimiento bacteriano)</li>
+            <li>Celiaquía y sensibilidad al gluten</li>
+            <li>Disbiosis, hinchazón, reflujo y constipación</li>
+          </ul>
+        </div>
+        <div class="act"><a class="btn btn-t wa" data-msg="Salud digestiva" href="#">Reservar turno</a></div>
+      </article>
+
+      <article class="svc">
+        <div>
+          <p class="num">03</p>
+          <h3>Condiciones crónicas y metabólicas</h3>
+          <p>Tratamiento nutricional de enfermedades crónicas no transmisibles, coordinado con tu médico cuando hace falta. Planes claros y realistas para mejorar los valores de laboratorio y la calidad de vida, con seguimiento periódico.</p>
+        </div>
+        <div>
+          <p class="cond">Condiciones que abordo</p>
+          <ul>
+            <li>Obesidad y sobrepeso</li>
+            <li>Insulinorresistencia y diabetes tipo 2</li>
+            <li>Hipertensión arterial</li>
+            <li>Dislipidemia (colesterol y triglicéridos)</li>
+          </ul>
+        </div>
+        <div class="act"><a class="btn btn-t wa" data-msg="Condiciones crónicas y metabólicas" href="#">Reservar turno</a></div>
+      </article>
+
+      <article class="svc">
+        <div>
+          <p class="num">04</p>
+          <h3>Nutrición infantil y familiar</h3>
+          <p>Orientación centrada en la familia para una alimentación saludable en cada etapa, con experiencia en nutrición clínica pediátrica hospitalaria. Sin presiones en la mesa: estrategias concretas para que comer sea algo tranquilo.</p>
+        </div>
+        <div>
+          <p class="cond">Consultas frecuentes</p>
+          <ul>
+            <li>Alimentación complementaria e inicio de sólidos</li>
+            <li>Selectividad alimentaria ("come poco" o "come siempre lo mismo")</li>
+            <li>Dudas sobre crecimiento y peso</li>
+            <li>Alimentación en la adolescencia y en el deporte</li>
+          </ul>
+        </div>
+        <div class="act"><a class="btn btn-t wa" data-msg="Nutrición infantil y familiar" href="#">Reservar turno</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- ================= CÓMO ES LA CONSULTA ================= -->
-<section class="process" id="consulta">
-  <div class="wrap grid">
+<section class="wrap process" id="consulta">
+  <div class="grid">
     <div>
       <p class="eyebrow">Cómo es la consulta</p>
       <h2>Escuchar primero, <em>medir después</em></h2>
-      <p class="lede">La primera consulta dura alrededor de una hora. Es presencial en Las Cañitas o virtual, y en las dos modalidades salís con un plan concreto.</p>
+      <p class="lede">La primera consulta dura alrededor de una hora. En las dos modalidades salís con un plan concreto para empezar.</p>
+      <div class="modes">
+        <div class="mode"><b>Presencial</b><span>Consultorio en Migueletes 1082, Las Cañitas. Incluye medición de composición corporal InBody.</span></div>
+        <div class="mode"><b>Virtual</b><span>Videollamada desde donde estés. Mismo abordaje y seguimiento, con el plan enviado por escrito.</span></div>
+      </div>
     </div>
     <div class="steps">
-      <div class="step"><span class="n">01</span><div><h3>Tu historia y tus objetivos</h3><p>Antecedentes, hábitos, rutina, qué probaste antes y qué querés lograr. De acá sale el punto de partida.</p></div></div>
-      <div class="step"><span class="n">02</span><div><h3>Medición de composición corporal</h3><p>En el consultorio hacemos una medición con InBody: masa muscular, grasa, agua y su distribución. Son 15 minutos y el informe te lo llevás.</p></div></div>
-      <div class="step"><span class="n">03</span><div><h3>Plan de acción personalizado</h3><p>Una propuesta de alimentación pensada para vos, con objetivos claros para las próximas semanas. Realista, no perfecta.</p></div></div>
+      <div class="step"><span class="n">01</span><div><h3>Tu historia y tus objetivos</h3><p>Antecedentes, hábitos, rutina, estudios recientes, qué probaste antes y qué querés lograr. De acá sale el punto de partida.</p></div></div>
+      <div class="step"><span class="n">02</span><div><h3>Evaluación nutricional</h3><p>Valoración completa y, en el consultorio, medición de composición corporal con InBody: masa muscular, grasa, agua y su distribución. El informe te lo llevás.</p></div></div>
+      <div class="step"><span class="n">03</span><div><h3>Plan de alimentación personalizado</h3><p>Una propuesta pensada para vos, con objetivos claros para las próximas semanas. Realista, no perfecta.</p></div></div>
       <div class="step"><span class="n">04</span><div><h3>Seguimiento</h3><p>Consultas de control para ajustar el plan y volver a medir. Ahí es donde el cambio se consolida.</p></div></div>
     </div>
   </div>
 </section>
 
 <!-- ================= INBODY COMO HERRAMIENTA ================= -->
-<section class="wrap tool" id="inbody">
-  <div class="grid">
+<section class="tool" id="inbody">
+  <div class="wrap grid">
     <div class="shot">
-      <img src="img/inbody-photo.jpg" alt="Equipo InBody del consultorio" loading="lazy" width="900" height="1200">
+      <img src="img/inbody-photo.jpg" alt="Equipo InBody del consultorio" width="900" height="1200">
       <span>Herramienta · InBody</span>
     </div>
     <div>
-      <p class="eyebrow">La herramienta</p>
+      <p class="eyebrow">Composición corporal</p>
       <h2>Medir lo que la balanza <em>no ve</em></h2>
-      <p class="lede">Una balanza te da un número. El InBody muestra de qué está hecho ese número, y eso cambia las decisiones: qué priorizar, cómo entrenar y cómo saber si el plan está funcionando.</p>
+      <p class="lede">Una balanza te da un número. El análisis de composición corporal muestra de qué está hecho ese número, y eso cambia las decisiones: qué priorizar, cómo entrenar y cómo saber si el plan está funcionando.</p>
       <div class="metrics">
         <div class="metric"><b>Masa muscular</b><span>Total y por segmento</span></div>
         <div class="metric"><b>Grasa corporal</b><span>Porcentaje y grasa visceral</span></div>
         <div class="metric"><b>Agua corporal</b><span>Hidratación y retención</span></div>
         <div class="metric"><b>Salud celular</b><span>Vitalidad y estado celular</span></div>
       </div>
-      <p class="muted" style="margin-top:1.5rem;font-size:.95rem">La medición está incluida en las consultas presenciales. También podés hacer solo la medición, con informe.</p>
+      <p class="muted" style="margin-top:1.5rem;font-size:.95rem">La medición está incluida en las consultas presenciales. También podés hacer solo la medición, con informe y devolución.</p>
     </div>
   </div>
 </section>
@@ -282,96 +381,74 @@ footer a{text-decoration:none}
     <div>
       <p class="eyebrow">Sobre mí</p>
       <p class="quote" style="margin-top:.75rem">“Quiero que salgas de la consulta entendiendo tu cuerpo, no con una lista de prohibiciones.”</p>
-    </div>
-    <div>
-      <p>Soy Mayra Farfán, Licenciada en Nutrición. Atiendo en mi consultorio de Las Cañitas y de forma virtual, y me especializo en descenso de peso con un enfoque integral y no peso‑centrista.</p>
-      <p>Trabajo con personas que ya probaron varias dietas y quieren algo distinto: un proceso que respete su ritmo, su historia y su relación con la comida. Incorporé la medición de composición corporal porque permite tomar decisiones con datos reales y ver progresos que la balanza no muestra.</p>
-      <div class="creds">
-        <div>Licenciada en Nutrición</div>
-        <div>Consultas presenciales y virtuales</div>
-        <div>Medición de composición corporal InBody en el consultorio</div>
-      </div>
       <a class="ig" href="https://www.instagram.com/nutri.maychu" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
         @nutri.maychu
       </a>
+      <a class="ig" href="https://www.linkedin.com/in/mayrafarfan/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.4 2H3.6A1.6 1.6 0 0 0 2 3.6v16.8A1.6 1.6 0 0 0 3.6 22h16.8a1.6 1.6 0 0 0 1.6-1.6V3.6A1.6 1.6 0 0 0 20.4 2zM8 19H5V9h3zM6.5 7.7A1.7 1.7 0 1 1 6.5 4.3a1.7 1.7 0 0 1 0 3.4zM19 19h-3v-4.9c0-1.2 0-2.7-1.6-2.7s-1.9 1.3-1.9 2.6V19h-3V9h2.9v1.4a3.2 3.2 0 0 1 2.8-1.6c3 0 3.6 2 3.6 4.6z"/></svg>
+        LinkedIn
+      </a>
     </div>
-  </div>
-</section>
-
-<!-- ================= HONORARIOS ================= -->
-<section class="wrap fees" id="honorarios">
-  <p class="eyebrow">Honorarios · Valores 2026</p>
-  <h2>Consultas y packs</h2>
-  <p class="muted">Tocá cualquier opción para consultar disponibilidad por WhatsApp.</p>
-  <div class="cols">
     <div>
-      <div class="fee-group">
-        <p class="label">Presencial · Las Cañitas</p>
-        <a class="fee wa" data-msg="1ra consulta con InBody" href="#"><span class="n">Primera consulta con InBody<small>Historia, medición y plan de acción</small></span><span class="p">$80.000</span></a>
-        <a class="fee wa" data-msg="Consulta de seguimiento con InBody" href="#"><span class="n">Consulta de seguimiento con InBody</span><span class="p">$60.000</span></a>
-        <a class="fee wa" data-msg="Solo InBody" href="#"><span class="n">Solo medición InBody<small>Medición e informe, sin consulta</small></span><span class="p">$50.000</span></a>
+      <p>Soy Mayra Farfán, Licenciada en Nutrición formada en el Instituto Universitario CEMIC. Atiendo en mi consultorio de Las Cañitas y de forma virtual, con un abordaje basado en evidencia, integral y no peso‑centrista.</p>
+      <p>Antes de abrir el consultorio trabajé en nutrición clínica hospitalaria, en internación y terapia intensiva pediátrica, como parte de equipos multidisciplinarios; y en investigación en salud pública, en proyectos de prevención de enfermedades crónicas. Esa combinación es la que traigo a cada consulta: rigor clínico y una mirada amplia sobre cómo comemos de verdad.</p>
+      <div class="creds">
+        <div>Licenciada en Nutrición · Instituto Universitario CEMIC</div>
+        <div>Experiencia en nutrición clínica hospitalaria y pediátrica</div>
+        <div>Investigación en salud pública y prevención de enfermedades crónicas</div>
+        <div>Consultas presenciales y virtuales, en español o inglés</div>
       </div>
-      <div class="fee-group">
-        <p class="label">Virtual</p>
-        <a class="fee wa" data-msg="1ra consulta virtual" href="#"><span class="n">Primera consulta</span><span class="p">$65.000</span></a>
-        <a class="fee wa" data-msg="Consulta de seguimiento virtual" href="#"><span class="n">Consulta de seguimiento</span><span class="p">$50.000</span></a>
-      </div>
-    </div>
-    <div class="pack">
-      <div class="fee-group">
-        <p class="label">Packs · Validez 4 meses desde la compra</p>
-        <h4>Pack inicial</h4><p class="sub">Primera consulta + 3 seguimientos</p>
-        <a class="fee wa" data-msg="Pack inicial presencial con InBody" href="#"><span class="n">Presencial, con InBody</span><span class="p"><s>$260.000</s>$230.000</span></a>
-        <a class="fee wa" data-msg="Pack inicial virtual" href="#"><span class="n">Virtual</span><span class="p"><s>$215.000</s>$190.000</span></a>
-        <h4>Pack seguimiento</h4><p class="sub">4 sesiones, renovación de seguimiento</p>
-        <a class="fee wa" data-msg="Pack seguimiento presencial con InBody" href="#"><span class="n">Presencial, con InBody</span><span class="p"><s>$240.000</s>$200.000</span></a>
-        <a class="fee wa" data-msg="Pack seguimiento virtual" href="#"><span class="n">Virtual</span><span class="p"><s>$200.000</s>$170.000</span></a>
-        <h4>Pack solo InBody</h4><p class="sub">4 mediciones de composición corporal</p>
-        <a class="fee wa" data-msg="Pack solo InBody (4 mediciones)" href="#"><span class="n">Presencial</span><span class="p"><s>$200.000</s>$170.000</span></a>
+      <div class="timeline">
+        <h3>Trayectoria</h3>
+        <div class="tl"><span class="org">2025 →</span><div><b>Consultorio propio · Las Cañitas</b><span>Nutrición clínica presencial y virtual. Descenso de peso, salud digestiva, condiciones metabólicas y nutrición infantil.</span></div></div>
+        <div class="tl"><span class="org">Fundación Hospitalaria</span><div><b>Nutricionista clínica pediátrica</b><span>Evaluación nutricional y planes individualizados en internación general y terapia intensiva pediátrica.</span></div></div>
+        <div class="tl"><span class="org">FIC Argentina</span><div><b>Nutricionista · Área de investigación</b><span>Proyectos de políticas de prevención de enfermedades no transmisibles, entre ellos relevamiento de sodio en alimentos procesados y monitoreo de la Ley de Promoción de la Alimentación Saludable.</span></div></div>
+        <div class="tl"><span class="org">CEMIC</span><div><b>Práctica profesional supervisada</b><span>Nutrición clínica y salud pública en hospital general privado de Buenos Aires.</span></div></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ================= RESEÑAS ================= -->
-<section class="reviews" id="resenas">
-  <div class="wrap">
-    <p class="eyebrow">Pacientes</p>
-    <div class="head" style="margin-top:.75rem">
-      <div class="score">5.0<span>★★★★★</span></div>
-      <a class="link" href="https://maps.app.goo.gl/xYsRs5TnKhgfKKxu7" target="_blank" rel="noopener">27 reseñas en Google</a>
-    </div>
-    <div class="quotes">
-      <div class="quote"><p>“Me atiendo hace unos meses con Mayra y tuve excelentes resultados en mi cambio de composición.”</p><cite>Julieta · Google</cite></div>
-      <div class="quote"><p>“Desde el primer momento me sentí súper cómoda y escuchada. No se trata simplemente de seguir una dieta.”</p><cite>Paciente · Google</cite></div>
-      <div class="quote"><p>“Me cambió totalmente mis hábitos. La paciencia y la amabilidad con la que me atendió me hicieron crear un vínculo mucho más sano con la comida.”</p><cite>Agustina · Google</cite></div>
-    </div>
+<section class="wrap reviews" id="resenas">
+  <p class="eyebrow">Pacientes</p>
+  <div class="head" style="margin-top:.75rem">
+    <div class="score">5.0<span>★★★★★</span></div>
+    <a class="link" href="https://maps.app.goo.gl/xYsRs5TnKhgfKKxu7" target="_blank" rel="noopener">27 reseñas en Google</a>
+  </div>
+  <div class="quotes">
+    <div class="quote"><p>“Me atiendo hace unos meses con Mayra y tuve excelentes resultados en mi cambio de composición.”</p><cite>Julieta · Google</cite></div>
+    <div class="quote"><p>“Desde el primer momento me sentí súper cómoda y escuchada. No se trata simplemente de seguir una dieta.”</p><cite>Paciente · Google</cite></div>
+    <div class="quote"><p>“Me cambió totalmente mis hábitos. La paciencia y la amabilidad con la que me atendió me hicieron crear un vínculo mucho más sano con la comida.”</p><cite>Agustina · Google</cite></div>
   </div>
 </section>
 
-<!-- ================= CONSULTORIO ================= -->
-<section class="wrap where" id="ubicacion">
-  <p class="eyebrow">Consultorio</p>
-  <h2>Las Cañitas, <em>Palermo</em></h2>
-  <div class="grid">
-    <div>
-      <dl>
-        <dt>Dirección</dt><dd><a href="https://maps.app.goo.gl/xYsRs5TnKhgfKKxu7" target="_blank" rel="noopener">Migueletes 1082</a><br><span class="muted">esq. Olleros · Las Cañitas, CABA</span></dd>
-        <dt>Horarios</dt><dd>Lunes a viernes, 9 a 18 h</dd>
-        <dt>Turnos</dt><dd><a class="wa" data-msg="" href="#">WhatsApp +54 9 11 3203‑9633</a></dd>
-        <dt>Instagram</dt><dd><a href="https://www.instagram.com/nutri.maychu" target="_blank" rel="noopener">@nutri.maychu</a></dd>
-      </dl>
-      <div class="prep">
-        <h3>Si tenés medición InBody, antes de venir</h3>
-        <ul>
-          <li>2 a 3 horas sin comer ni tomar líquidos</li>
-          <li>Ropa liviana (podés traer short y top para cambiarte)</li>
-          <li>Sin reloj, pulseras ni anillos: el metal interfiere con la lectura</li>
-        </ul>
+<!-- ================= CONSULTORIO Y TURNOS ================= -->
+<section class="where" id="turnos">
+  <div class="wrap">
+    <p class="eyebrow">Consultorio y turnos</p>
+    <h2>Las Cañitas, <em>Palermo</em></h2>
+    <div class="grid">
+      <div>
+        <dl>
+          <dt>Dirección</dt><dd><a href="https://maps.app.goo.gl/xYsRs5TnKhgfKKxu7" target="_blank" rel="noopener">Migueletes 1082</a><br><span class="muted">esq. Olleros · Las Cañitas, CABA</span></dd>
+          <dt>Horarios</dt><dd>Lunes a viernes, 9 a 18 h</dd>
+          <dt>Modalidad</dt><dd>Presencial y virtual</dd>
+          <dt>WhatsApp</dt><dd><a class="wa" data-msg="" href="#">+54 9 11 3203‑9633</a></dd>
+          <dt>Instagram</dt><dd><a href="https://www.instagram.com/nutri.maychu" target="_blank" rel="noopener">@nutri.maychu</a></dd>
+        </dl>
+        <div class="book">
+          <h3>Reservar turno</h3>
+          <p>Escribime por WhatsApp con el motivo de consulta y la modalidad que preferís. Te respondo en el día con horarios disponibles y toda la información.</p>
+          <a class="btn btn-p wa" data-msg="" href="#">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.7.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+            Escribir por WhatsApp
+          </a>
+        </div>
       </div>
+      <iframe loading="lazy" title="Mapa del consultorio" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Nutrici%C3%B3n+y+Composici%C3%B3n+Corporal+Lic.+Mayra+Farf%C3%A1n,+Migueletes+1082,+CABA&z=16&output=embed"></iframe>
     </div>
-    <iframe loading="lazy" title="Mapa del consultorio" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Nutrici%C3%B3n+y+Composici%C3%B3n+Corporal+Lic.+Mayra+Farf%C3%A1n,+Migueletes+1082,+CABA&z=16&output=embed"></iframe>
   </div>
 </section>
 
@@ -380,10 +457,10 @@ footer a{text-decoration:none}
   <div class="final">
     <p class="eyebrow">Turnos</p>
     <h2>Empecemos por una consulta</h2>
-    <p>Escribime por WhatsApp y coordinamos día, horario y modalidad. Te respondo en el día.</p>
+    <p>Contame qué te trae y coordinamos día, horario y modalidad.</p>
     <a class="btn wa" data-msg="" href="#">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.7.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
-      Escribir por WhatsApp
+      Reservar turno por WhatsApp
     </a>
     <p class="tel">+54 9 11 3203 9633</p>
   </div>
@@ -392,14 +469,14 @@ footer a{text-decoration:none}
 </main>
 
 <footer class="wrap">
-  <p>Lic. Mayra Farfán · Nutrición y composición corporal</p>
+  <p>Lic. Mayra Farfán · Nutrición clínica y composición corporal</p>
   <p>Migueletes 1082 · Las Cañitas, CABA · <a href="https://www.instagram.com/nutri.maychu" target="_blank" rel="noopener">@nutri.maychu</a></p>
 </footer>
 
 <div class="stick">
   <a class="btn btn-p wa" data-msg="" href="#">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.7.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
-    Agendar por WhatsApp
+    Reservar turno por WhatsApp
   </a>
 </div>
 
@@ -407,18 +484,19 @@ footer a{text-decoration:none}
 /* Todos los CTAs abren WhatsApp con un mensaje precargado.
    El origen (?src=flyer_qr | flyer_wa | ig) viaja dentro del texto:
    así May sabe de dónde llegó cada persona sin analytics, y el agente
-   de turnos lo puede leer después. */
+   de turnos lo puede leer después. Los botones de cada servicio
+   agregan "Motivo: <servicio>". */
 (function(){
   var TEL='5491132039633';
   var src=new URLSearchParams(location.search).get('src')||'';
   var intro={
-    flyer_qr:'Hola May! Escaneé el QR de tu flyer y quiero agendar una consulta 🙂',
-    flyer_wa:'Hola May! Vi tu flyer y quiero agendar una consulta 🙂',
-    ig:'Hola May! Vengo de tu Instagram y quiero agendar una consulta 🙂'
-  }[src]||'Hola May! Vi tu página y quiero agendar una consulta 🙂';
+    flyer_qr:'Hola May! Escaneé el QR de tu flyer y quiero reservar un turno 🙂',
+    flyer_wa:'Hola May! Vi tu flyer y quiero reservar un turno 🙂',
+    ig:'Hola May! Vengo de tu Instagram y quiero reservar un turno 🙂'
+  }[src]||'Hola May! Vi tu página y quiero reservar un turno 🙂';
   document.querySelectorAll('a.wa').forEach(function(a){
     var s=a.getAttribute('data-msg');
-    var msg=intro+(s?'\nMe interesa: '+s:'');
+    var msg=intro+(s?'\nMotivo: '+s:'');
     a.href='https://wa.me/'+TEL+'?text='+encodeURIComponent(msg);
     a.target='_blank'; a.rel='noopener';
   });
