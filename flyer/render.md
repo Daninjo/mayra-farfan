@@ -19,4 +19,4 @@ node shot2x.js file://$PWD/flyer/flyer.html 1080 1350 flyer2x.png   # deviceScal
 node shot.js file://$PWD/flyer/og.html 1200 630 og.png 0   # luego convertir a og.jpg
 ```
 
-QR: `segno.make("https://daninjo.github.io/mayra-farfan/?src=flyer_qr", error='m')`.
+QR: `segno.make("https://mayrafarfan.com/?src=flyer_qr", error='m')`.
