@@ -125,17 +125,19 @@ nav .btn{padding:.6rem 1.05rem;font-size:.92rem}
 .mode span{color:var(--gris)}
 @media(min-width:760px){.process .grid{display:grid;grid-template-columns:.9fr 1.4fr;gap:3.5rem;align-items:start}.process .grid>div:first-child{position:sticky;top:2rem}}
 
-/* ---- inbody como herramienta ---- */
+/* ---- composición corporal ---- */
 .tool{background:var(--piedra)}
-.tool .grid{display:grid;gap:2rem;align-items:center}
-.tool .shot{border-radius:22px;overflow:hidden;background:#0B0B0B;aspect-ratio:3/4;max-width:360px;margin:0 auto;width:100%;position:relative}
-.tool .shot img{width:100%;height:100%;object-fit:cover;object-position:center}
-.tool .shot span{position:absolute;left:1rem;top:1rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:#CFC8BB}
-.tool .metrics{display:grid;grid-template-columns:1fr 1fr;gap:.6rem 1.25rem;margin-top:1.5rem}
-.tool .metric{border-left:2px solid var(--verde);padding-left:.8rem}
-.tool .metric b{display:block;font-family:var(--display);font-size:1rem;font-weight:700}
-.tool .metric span{font-family:var(--mono);font-size:.72rem;color:var(--gris)}
-@media(min-width:760px){.tool .grid{grid-template-columns:.75fr 1.25fr;gap:3.5rem}.tool .shot{max-width:none}}
+.tool .grid{display:grid;gap:2rem;margin-top:2.25rem;align-items:start}
+.tool .shot{background:var(--piedra2);border-radius:22px;padding:2rem 1.5rem 0;display:flex;justify-content:center;align-items:flex-end;overflow:hidden;max-width:360px;margin:0 auto;width:100%}
+.tool .shot img{width:min(60%,220px);height:auto;filter:drop-shadow(0 18px 24px rgba(43,38,34,.18))}
+.tool h3{font-size:1.2rem;margin-bottom:.6rem}
+.tool p{color:var(--gris);font-size:.98rem;margin-bottom:1rem;max-width:60ch}
+.tool .cols2{display:grid;gap:1.5rem;margin-top:1.5rem}
+.tool .cond{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--verde);margin-bottom:.6rem}
+.tool ul{list-style:none;display:grid;gap:.45rem;font-size:.95rem}
+.tool li{display:flex;gap:.6rem}
+.tool li::before{content:"—";color:var(--salmon);flex:none}
+@media(min-width:760px){.tool .grid{grid-template-columns:.7fr 1.3fr;gap:3.5rem}.tool .shot{max-width:none;position:sticky;top:2rem;padding-top:2.5rem}.tool .shot img{width:min(70%,260px)}.tool .cols2{grid-template-columns:1fr 1fr}}
 
 /* ---- sobre may ---- */
 .about{background:var(--salvia)}
@@ -203,7 +205,7 @@ footer a{text-decoration:none}
   <nav>
     <a class="brand" href="#top">Lic. Mayra Farfán<span>Nutrición · Las Cañitas</span></a>
     <div class="links">
-      <a href="#servicios">Servicios</a><a href="#consulta">La consulta</a><a href="#sobre">Sobre mí</a><a href="#turnos">Consultorio</a>
+      <a href="#servicios">Servicios</a><a href="#sobre">Sobre mí</a><a href="#turnos">Consultorio</a>
     </div>
     <a class="btn btn-p wa" data-msg="" href="#">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.7.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
@@ -228,7 +230,6 @@ footer a{text-decoration:none}
         </a>
         <a class="btn btn-s" href="#servicios">Ver servicios</a>
       </div>
-      <div class="facts"><span>Presencial · Las Cañitas</span><span>Virtual</span><span>Composición corporal InBody</span><span>5.0 ★ en Google</span></div>
     </div>
     <div class="photo">
       <img src="img/mayra.jpg" alt="Lic. Mayra Farfán en su consultorio" width="800" height="1000" fetchpriority="high">
@@ -332,45 +333,44 @@ footer a{text-decoration:none}
   </div>
 </section>
 
-<!-- ================= CÓMO ES LA CONSULTA ================= -->
-<section class="wrap process" id="consulta">
-  <div class="grid">
-    <div>
-      <p class="eyebrow">Cómo es la consulta</p>
-      <h2>Escuchar primero, <em>medir después</em></h2>
-      <p class="lede">La primera consulta dura alrededor de una hora. En las dos modalidades salís con un plan concreto para empezar.</p>
-      <div class="modes">
-        <div class="mode"><b>Presencial</b><span>Consultorio en Migueletes 1082, Las Cañitas. Incluye medición de composición corporal InBody.</span></div>
-        <div class="mode"><b>Virtual</b><span>Videollamada desde donde estés. Mismo abordaje y seguimiento, con el plan enviado por escrito.</span></div>
-      </div>
-    </div>
-    <div class="steps">
-      <div class="step"><span class="n">01</span><div><h3>Tu historia y tus objetivos</h3><p>Antecedentes, hábitos, rutina, estudios recientes, qué probaste antes y qué querés lograr. De acá sale el punto de partida.</p></div></div>
-      <div class="step"><span class="n">02</span><div><h3>Evaluación nutricional</h3><p>Valoración completa y, en el consultorio, medición de composición corporal con InBody: masa muscular, grasa, agua y su distribución. El informe te lo llevás.</p></div></div>
-      <div class="step"><span class="n">03</span><div><h3>Plan de alimentación personalizado</h3><p>Una propuesta pensada para vos, con objetivos claros para las próximas semanas. Realista, no perfecta.</p></div></div>
-      <div class="step"><span class="n">04</span><div><h3>Seguimiento</h3><p>Consultas de control para ajustar el plan y volver a medir. Ahí es donde el cambio se consolida.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= INBODY COMO HERRAMIENTA ================= -->
+<!-- ================= COMPOSICIÓN CORPORAL ================= -->
 <section class="tool" id="inbody">
-  <div class="wrap grid">
-    <div class="shot">
-      <img src="img/inbody-photo.jpg" alt="Equipo InBody del consultorio" width="900" height="1200">
-      <span>Herramienta · InBody</span>
-    </div>
-    <div>
-      <p class="eyebrow">Composición corporal</p>
-      <h2>Medir lo que la balanza <em>no ve</em></h2>
-      <p class="lede">Una balanza te da un número. El análisis de composición corporal muestra de qué está hecho ese número, y eso cambia las decisiones: qué priorizar, cómo entrenar y cómo saber si el plan está funcionando.</p>
-      <div class="metrics">
-        <div class="metric"><b>Masa muscular</b><span>Total y por segmento</span></div>
-        <div class="metric"><b>Grasa corporal</b><span>Porcentaje y grasa visceral</span></div>
-        <div class="metric"><b>Agua corporal</b><span>Hidratación y retención</span></div>
-        <div class="metric"><b>Salud celular</b><span>Vitalidad y estado celular</span></div>
+  <div class="wrap">
+    <p class="eyebrow">Análisis de composición corporal · InBody</p>
+    <h2>Lo que tu peso <em>no te cuenta</em></h2>
+    <p class="lede">Dos personas con el mismo peso pueden tener cuerpos muy distintos. Por eso en el consultorio cada consulta presencial incluye un análisis de composición corporal con InBody, el equipo de bioimpedancia de referencia en clínicas, hospitales y centros deportivos.</p>
+    <div class="grid">
+      <div class="shot">
+        <img src="img/inbody-270s.png" alt="Equipo InBody de análisis de composición corporal" width="520" height="1410">
       </div>
-      <p class="muted" style="margin-top:1.5rem;font-size:.95rem">La medición está incluida en las consultas presenciales. También podés hacer solo la medición, con informe y devolución.</p>
+      <div>
+        <h3>Cómo funciona</h3>
+        <p>El equipo envía una corriente eléctrica imperceptible a través de ocho electrodos, en manos y pies, y mide cómo la conducen los distintos tejidos: el músculo, con mucha agua, la conduce bien; la grasa, no. Con varias frecuencias y midiendo brazos, piernas y tronco por separado, calcula la composición de cada segmento sin estimaciones basadas en edad o sexo.</p>
+        <p>La medición dura menos de un minuto, es no invasiva, sin radiación, y se hace de pie, con ropa liviana. El informe se imprime en el momento y lo repasamos juntas en la consulta.</p>
+        <div class="cols2">
+          <div>
+            <p class="cond">Qué se mide</p>
+            <ul>
+              <li>Masa muscular esquelética, total y por segmento</li>
+              <li>Masa grasa y porcentaje de grasa corporal</li>
+              <li>Grasa visceral</li>
+              <li>Agua corporal total y su distribución (retención)</li>
+              <li>Tasa metabólica basal</li>
+              <li>Ángulo de fase, un indicador de salud celular</li>
+            </ul>
+          </div>
+          <div>
+            <p class="cond">Qué te llevás</p>
+            <ul>
+              <li>Un punto de partida real, no solo un número en la balanza</li>
+              <li>Objetivos concretos: bajar grasa conservando músculo, ganar masa muscular, mejorar hidratación</li>
+              <li>Seguimiento objetivo consulta a consulta, para ver progresos que el peso no muestra</li>
+              <li>Detección temprana de pérdida de músculo o retención de líquidos</li>
+              <li>El informe impreso para guardar y comparar</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -398,13 +398,6 @@ footer a{text-decoration:none}
         <div>Experiencia en nutrición clínica hospitalaria y pediátrica</div>
         <div>Investigación en salud pública y prevención de enfermedades crónicas</div>
         <div>Consultas presenciales y virtuales, en español o inglés</div>
-      </div>
-      <div class="timeline">
-        <h3>Trayectoria</h3>
-        <div class="tl"><span class="org">2025 →</span><div><b>Consultorio propio · Las Cañitas</b><span>Nutrición clínica presencial y virtual. Descenso de peso, salud digestiva, condiciones metabólicas y nutrición infantil.</span></div></div>
-        <div class="tl"><span class="org">Fundación Hospitalaria</span><div><b>Nutricionista clínica pediátrica</b><span>Evaluación nutricional y planes individualizados en internación general y terapia intensiva pediátrica.</span></div></div>
-        <div class="tl"><span class="org">FIC Argentina</span><div><b>Nutricionista · Área de investigación</b><span>Proyectos de políticas de prevención de enfermedades no transmisibles, entre ellos relevamiento de sodio en alimentos procesados y monitoreo de la Ley de Promoción de la Alimentación Saludable.</span></div></div>
-        <div class="tl"><span class="org">CEMIC</span><div><b>Práctica profesional supervisada</b><span>Nutrición clínica y salud pública en hospital general privado de Buenos Aires.</span></div></div>
       </div>
     </div>
   </div>

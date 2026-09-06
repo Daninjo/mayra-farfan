@@ -28,6 +28,6 @@ Si tocan "Reservar turno" dentro de un servicio, se agrega una línea "Motivo: �
 
 ## Editar
 
-- Textos y horarios: `index.html` (una sola página, sin build). Secciones: hero, enfoque, `#servicios`, `#consulta`, `#inbody`, `#sobre` (bio y trayectoria de LinkedIn), reseñas, `#turnos`.
+- Textos y horarios: `index.html` (una sola página, sin build). Secciones: hero, enfoque, `#servicios`, `#inbody` (composición corporal, imagen oficial InBody 270S), `#sobre`, reseñas, `#turnos`.
 - Flyer: `flyer/flyer.html`. Para regenerar el PNG/PDF se usa Chrome headless (ver `flyer/render.md`).
 - Si se compra dominio propio (ej. `mayrafarfan.com`): agregar archivo `CNAME` con el dominio y configurar DNS. GitHub redirige la URL vieja `daninjo.github.io/mayra-farfan` al dominio nuevo, así que los QR ya impresos siguen funcionando.
